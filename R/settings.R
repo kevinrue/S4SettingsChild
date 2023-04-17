@@ -6,5 +6,5 @@
 #' @export
 #' @docType data
 exampleSettings <- IncrementalReadOnlySettings(
-  version = "1.0.0"
+  S4SettingsChild = TRUE
 )
