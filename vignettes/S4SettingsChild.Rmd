@@ -87,14 +87,15 @@ citation("S4SettingsChild")
 
 # Quick start to using `S4SettingsChild`
 
-A new list of settings can be created using the function `IncrementalReadOnlySettings()`, e.g.
+An object named `exampleSettings` that contains a list of preconfigured read-only settings is exported by `r BiocStyle::Biocpkg("S4SettingsChild")`.
+The object is immediately available when the package is attached to the session, e.g.
 
 ```{r "start", message=FALSE}
 library("S4SettingsChild")
 exampleSettings
 ```
 
-New settings can be added using the `$`, e.g.
+New read-only settings can be added using the `$` symbol, e.g.
 
 ```{r}
 exampleSettings$new_setting <- TRUE
@@ -104,6 +105,7 @@ exampleSettings
 However, existing settings cannot be edited, e.g.
 
 ```{r, error=TRUE}
+exampleSettings$S4SettingsChild <- package_version("0.99.0")
 exampleSettings$new_setting <- FALSE
 ```
 
