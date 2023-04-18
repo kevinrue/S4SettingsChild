@@ -1,14 +1,30 @@
 Package: S4SettingsChild
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Initiate Read-Only Settings using S4Settings
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Authors@R: 
+    c(person("Kevin", "Rue-Albrecht", email = "kevinrue67@gmail.com",
+        role = c("aut", "cre"),
+        comment = c(ORCID = "0000-0003-3899-3872")))
+Description: Initiates a list of read-only settings using S4Settings.
+    Those settings are exported for access in downstream packages, which may
+    also add their own read-only settings, but not edit existing settings.
 License: Artistic-2.0
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
 Imports: S4Settings
-Remotes: kevinrue/S4Settings@new-class
+Remotes: kevinrue/S4Settings
+VignetteBuilder: knitr
+biocViews:
+    Software,
+    Infrastructure,
+    DataRepresentation
+Config/testthat/edition: 3
+Suggests: 
+    BiocStyle,
+    knitr,
+    RefManageR,
+    rmarkdown,
+    sessioninfo,
+    testthat
